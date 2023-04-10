@@ -1,123 +1,27 @@
-# Angular OData Library (es5)
+# NgxOdataClient
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/StefH/angular-odata-es5.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/StefH/angular-odata-es5.svg?branch=master)](https://travis-ci.org/StefH/angular-odata-es5)
-[![codecov](https://codecov.io/gh/StefH/angular-odata-es5/branch/master/graph/badge.svg)](https://codecov.io/gh/StefH/angular-odata-es5)
-[![npm version](https://badge.fury.io/js/angular-odata-es5.svg)](http://badge.fury.io/js/angular-odata-es5)
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
 
-## Demo
-https://StefH.github.io/angular-odata-es5/demo/
+## Development server
 
-## Table of contents
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-- [About](#about)
-- [Installation](#installation)
-- [Usage example](#usage)
-- [Documentation](#documentation)
-- [Development](#development)
+## Code scaffolding
 
-## About
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-The goal is to create a fluent API for querying, creating, updating and deleting OData resources in Angular > 2.
-Note that this library targets 'es5' so that Uglify will work correctly.
+## Build
 
-## Installation
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-Install through npm:
-```
-npm install --save angular-odata-es5
-```
+## Running unit tests
 
-## Usage
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-``` typescript
-import { ODataConfiguration, ODataServiceFactory, ODataService } from "angular-odata-es5";
-import { bootstrap } from "@angular/platform/browser";
-    
-@Injectable()
-class MyODataConfig extends ODataConfiguration{
-    baseUrl="http://localhost:54872/odata/";
-}
+## Running end-to-end tests
 
-bootstrap(app, [
-    provide(ODataConfiguration, { useClass:MyODataConfig }),
-    ODataServiceFactory,
-]
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-//An example model interface
-interface INotification {
-    Id: number;
-    CommentId: number;
-    Comment: IComment;
-    FromId: number;
-    From: IResource;
-    Priority: number;
-    SendDate: Date;
-    IsArchived: boolean;
-    Text: string;
-}
+## Further help
 
-//An example component
-@Component({
-  ...
-})
-export class NotyListComponent {
-    private odata: ODataService<INotification>;
-    constructor(private odataFactory: ODataServiceFactory, ...) {
-        this.odata = this.odataFactory.CreateService<INotification>("notification");
-    }
-    
-    getOneNoty(id: number) {
-        this.odata.Get(id).Select("Id,Text").Expand("From,To").Exec()
-        .subscribe(
-            singleNoty => {...},
-            error => {...}
-        );
-    }
-
-    getNotys(){
-        this.odata
-            .Query()                    //Creates a query object
-            .Top(this.top)
-            .Skip(this.skip)
-            .Expand('Comment, From')
-            .OrderBy('SendDate desc')
-            .Filter(this.filterString)
-            .Exec()                     //Fires the request
-            .subscribe(                 //Subscribes to Observable<Array<T>>
-            notys => {
-                this.notys = notys;     //Do something with the result
-            },
-            error => {
-                ...                     //Local error handler
-            });
-    
-    }
-}
-```
-
-You may also find it useful to view the [demo source](https://github.com/StefH/angular-odata-es5/blob/master/demo/demo.component.ts).
-
-### Usage without a module bundler
-``` javascript
-<script src="node_modules/angular-odata-es5/bundles/angular-odata-es5.umd.js"></script>
-<script>
-    // everything is exported AngularODataES5 namespace
-</script>
-```
-
-## Documentation
-All documentation is auto-generated from the source via [compodoc](https://compodoc.github.io/compodoc/) and can be viewed here:
-https://StefH.github.io/angular-odata-es5/docs/
-
-## Development
-
-### Prepare your environment
-* Install [Node.js](http://nodejs.org/) and NPM (should come with)
-* Install local dev dependencies: `npm install` while current directory is this repo
-
-### Development server
-Run `npm start` to start a development server on port 8000 with auto reload + tests.
-
-### Testing
-Run `npm test` to run tests once or `npm run test:watch` to continually run tests.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
