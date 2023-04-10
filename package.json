@@ -1,9 +1,6 @@
 {
-  "name": "@lmco-eit-common/ngx-odata-client",
+  "name": "ngx-odata-client",
   "version": "0.0.1",
-  "publishConfig": {
-    "registry": "https://nexus-ent.us.lmco.com/repository/EITCommon/"
-  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
