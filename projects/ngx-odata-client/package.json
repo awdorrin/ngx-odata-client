@@ -1,15 +1,12 @@
 {
-  "name": "@lmco-eit-common/ngx-odata-client",
+  "name": "ngx-odata-client",
   "version": "0.0.1",
   "description": "Forked from https://github.com/StefH/angular-odata-es5 and updated for Angular 15",
-  "author": "albert.dorrington@lmco.com",
+  "author": "awdorrin@gmail.com",
   "keywords": [
    "angular",
    "odata"
   ],
-  "publishConfig": {
-    "registry": "https://nexus-ent.us.lmco.com/repository/EITCommon/"
-  },
   "dependencies": {    
     "tslib": "^2.3.0"
   },

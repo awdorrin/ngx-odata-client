@@ -12,7 +12,7 @@
     // "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "@lmco-eit-common/ngx-odata-client": [
+      "ngx-odata-client": [
         "dist/ngx-odata-client"
       ]
     },
