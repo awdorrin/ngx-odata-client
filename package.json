@@ -1,6 +1,6 @@
 {
   "name": "@awdorrin/ngx-odata-client",
-  "version": "16.0.0",
+  "version": "17.0.0",
   "description": "OData service for Angular (forked from https://github.com/StefH/angular-odata-es5)",
   "repository": {
     "type": "git",
