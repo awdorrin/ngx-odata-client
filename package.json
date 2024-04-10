@@ -1,6 +1,6 @@
 {
-  "name": "ngx-odata-client",
-  "version": "0.0.1",
+  "name": "@awdorrin/ngx-odata-client",
+  "version": "15.0.0",
   "description": "OData service for Angular (forked from https://github.com/StefH/angular-odata-es5)",
   "repository": {
     "type": "git",
@@ -63,5 +63,6 @@
     "karma-jasmine-html-reporter": "~2.0.0",
     "ng-packagr": "^15.1.0",
     "typescript": "~4.9.4"
-  }
+  },
+  "main": "index.js"
 }
