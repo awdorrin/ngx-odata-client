@@ -1,6 +1,6 @@
 {
   "name": "@awdorrin/ngx-odata-client",
-  "version": "16.0.0",
+  "version": "16.0.1",
   "description": "OData service for Angular (forked from https://github.com/StefH/angular-odata-es5)",
   "repository": {
     "type": "git",
@@ -44,12 +44,12 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.13",
-    "@angular-eslint/builder": "16.3.1",
-    "@angular-eslint/eslint-plugin": "16.3.1",
-    "@angular-eslint/eslint-plugin-template": "16.3.1",
-    "@angular-eslint/schematics": "16.3.1",
-    "@angular-eslint/template-parser": "16.3.1",
-    "@angular/cli": "~16.2.13",
+    "@angular-eslint/builder": "^16.3.1",
+    "@angular-eslint/eslint-plugin": "^16.3.1",
+    "@angular-eslint/eslint-plugin-template": "^16.3.1",
+    "@angular-eslint/schematics": "^16.3.1",
+    "@angular-eslint/template-parser": "^16.3.1",
+    "@angular/cli": "^16.2.13",
     "@angular/compiler-cli": "^16.2.12",
     "@types/jasmine": "~4.3.0",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
