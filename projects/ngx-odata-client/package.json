@@ -11,8 +11,8 @@
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
-    "@angular/common": "^15.1.0",
-    "@angular/core": "^15.1.0",
+    "@angular/common": "^17.3.3",
+    "@angular/core": "^17.3.3",
     "linq-collections": "^1.0.254"
   },
   "sideEffects": false
