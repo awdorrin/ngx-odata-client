@@ -1,24 +1,94 @@
-# NgxOdataClient
+# @awdorrin/ngx-odata-client
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.0.
+An Angular OData client library for consuming OData services. Forked from [angular-odata-es5](https://github.com/StefH/angular-odata-es5) and updated for modern Angular versions.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name --project ngx-odata-client` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-odata-client`.
-> Note: Don't forget to add `--project ngx-odata-client` or else it will be added to the default project in your `angular.json` file. 
+- 🚀 Support for Angular 19, 20, and 21
+- 📦 Modern ESM package format
+- 🔧 TypeScript support
+- 🌐 Full OData query capabilities
+- ⚡ RxJS-based async operations
 
-## Build
+## Installation
 
-Run `ng build ngx-odata-client` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+npm install @awdorrin/ngx-odata-client
+```
 
-## Publishing
+## Compatibility
 
-After building your library with `ng build ngx-odata-client`, go to the dist folder `cd dist/ngx-odata-client` and run `npm publish`.
+| Angular Version | Package Version |
+|----------------|-----------------|
+| 21.x           | 21.0.0+        |
+| 20.x           | 21.0.0+        |
+| 19.x           | 21.0.0+        |
+| 20.x           | 20.0.0+        |
+| 19.x           | 20.0.0+        |
+| 18.x           | 18.0.0         |
+| 17.x           | 17.0.1         |
+| 16.x           | 16.0.1         |
+| 15.x           | 15.0.2         |
 
-## Running unit tests
+## Usage
 
-Run `ng test ngx-odata-client` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Import the Module
 
-## Further help
+```typescript
+import { NgxOdataClientModule } from '@awdorrin/ngx-odata-client';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+@NgModule({
+  imports: [
+    NgxOdataClientModule
+  ]
+})
+export class AppModule { }
+```
+
+### Use the OData Service
+
+```typescript
+import { ODataService } from '@awdorrin/ngx-odata-client';
+
+constructor(private odataService: ODataService) {
+  // Configure your OData endpoint
+}
+```
+
+## Development
+
+### Build the Library
+
+```bash
+npm run build:lib
+```
+
+### Publish to npm
+
+```bash
+npm run publish:lib
+```
+
+This will build the library and publish it to npm.
+
+### Version Management
+
+```bash
+npm run version:patch  # Bump patch version (x.x.X)
+npm run version:minor  # Bump minor version (x.X.0)
+npm run version:major  # Bump major version (X.0.0)
+```
+
+## Links
+
+- **npm Package**: https://www.npmjs.com/package/@awdorrin/ngx-odata-client
+- **GitHub Repository**: https://github.com/awdorrin/ngx-odata-client
+- **Issues**: https://github.com/awdorrin/ngx-odata-client/issues
+
+## License
+
+MIT
+
+## Credits
+
+Originally forked from [angular-odata-es5](https://github.com/StefH/angular-odata-es5) by StefH.
