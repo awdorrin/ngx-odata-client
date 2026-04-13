@@ -1,6 +1,6 @@
 {
   "name": "@awdorrin/ngx-odata-client",
-  "version": "20.0.1",
+  "version": "21.0.0",
   "description": "Forked from https://github.com/StefH/angular-odata-es5",
   "author": "awdorrin@gmail.com",
   "keywords": [
@@ -11,8 +11,8 @@
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
-    "@angular/common": "^19.0.0 || ^20.0.0",
-    "@angular/core": "^19.0.0 || ^20.0.0",
+    "@angular/common": "^19.0.0 || ^20.0.0 || ^21.0.0",
+    "@angular/core": "^19.0.0 || ^20.0.0 || ^21.0.0",
     "linq-collections": "^1.0.254"
   },
   "sideEffects": false
